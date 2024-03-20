@@ -15,6 +15,7 @@ class YoutubeUploaderRPA():
     driver = login.youtube_login()
     driver
     print("DRIVER: ", driver) """
+    #TODO: Select channel to upload https://www.youtube.com/account
     uploader = YouTubeUploader(self.driver, self.video_path, self.metadata, self.thumbnail_path)
-    was_video_uploaded, video_id = uploader.upload()
+    was_video_uploaded, video_id = uploader.youtube_upload()
     assert was_video_uploaded
